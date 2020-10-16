@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ph.D. Exam registration 2021</title>
+</head>
+
+<body>
+    <!-- 		    Main Header part 			-->
+    <header>
+        <h1 class="main-header">Ph.D. Exam registration 2021</h1>
+    </header>
+
+    <!-- 			Main Registeration part 			-->
+    <main>
+        <form id="PHD-registeration" onsubmit="alert('Registeration Form Submitted Successfully !')" autocomplete="on">
+            <fieldset>
+                <legend><strong>Student Information Section</strong></legend>
+                <label for="first-name">First Name :</label>
+                <input type="text" id="first-name" name="fname" placeholder="First name..." required>
+
+                <label for="middle-name">Middle Name :</label>
+                <input type="text" id="middle-name" name="mname" placeholder="Middle name..." required>
+
+                <label for="last-name">Last Name :</label>
+                <input type="text" id="last-name" name="lname" placeholder="Last name..." required>
+                <br />
+
+                <label for="parent-first-name">Parent's First Name :</label>
+                <input type="text" id="parent-first-name" name="pfname" placeholder="Parent's First name..." required>
+
+                <label for="parent-middle-name">Parent's Middle Name :</label>
+                <input type="text" id="parent-middle-name" name="pmname" placeholder="Parent's Middle name...">
+
+                <label for="id-proof-type">ID proof Type :</label>
+                <select name="id-proof-type" id="id-proof-type" required>
+                    <option value="Aadhar-card" selected>Aadhar Card</option>
+                    <option value="Pan-card">Pan Card</option>
+                    <option value="Voter-id">Voter Id</option>
+                    <option value="Passport">Passport</option>
+                    <option value="Driving-license">Driving License</option>
+                </select>
+
+                <label for="id-proof-file">Upload ID proof :</label>
+                <input type="file" id="id-proof-file" name="id" accept="image/*,application/pdf" required multiple>
+                <br />
+
+                <label for="mobile-number">Mobile Number :</label>
+                <input type="tel" id="mobile-number" name="number" placeholder="Mobile number..." pattern="[0-9]{10}"
+                    required>
+
+                <label for="email">Email address :</label>
+                <input type="email" id="email" name="email" placeholder="Email address...">
+                <br />
+
+                <label for="address">Address :</label>
+                <textarea name="address" id="address" placeholder="123 Street, ..." rows="5" cols="50" maxlength="500"
+                    required style="vertical-align: top;"></textarea>
+
+                <label for="city">City :</label>
+                <input name="city" required id="city" placeholder="Eg. Sangli, Pune..." required>
+
+                <label for="state">State :</label>
+                <input name="state" required id="state" placeholder="Eg. Maharashtra, Kerela..." required>
+
+                <br />
+
+                <label for="zip">Zip :</label>
+                <input name="zip" required id="zip" placeholder="416416" required>
+
+                <label for="country">Country :</label>
+                <input name="country" required id="country" placeholder="India...">
+            </fieldset>
+            <br />
+
+            <fieldset>
+                <legend>
+                    <strong>Educational Information Section</strong>
+                </legend>
+
+                <label for="qualification">Qualification :</label>
+                <select name="qualification" id="qualification" form="PHD-registeration" required>
+                    <option value="" selected disabled hidden>Select</option>
+                    <option value="phd">Ph.D</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="msc">M.Sc</option>
+                    <option value="mbbs">MBBS</option>
+                    <option value="mba">MBA</option>
+                    <option value="mphil">M.Phil</option>
+                </select>
+
+                <label for="branch">Branch :</label>
+                <select name="branch" id="branch" form="PHD-registeration" required>
+                    <option value="" selected disabled hidden>Select</option>
+                    <option value="CSE">Computer Science & Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="ELE">Electrical</option>
+                    <option value="ELC">Electronics</option>
+                    <option value="MECH">Mechanical</option>
+                    <option value="CV">Civil</option>
+                </select>
+
+                <label for="college">College Name :</label>
+                <input list="colleges" id="college" placeholder="Name of College..." required>
+                <datalist id="colleges">
+                    <option value="Birla Institute of Technology">
+                    <option value="College Of Engineering, Pune">
+                    <option value="Indian Institute of Science, Bangalore">
+                    <option value="Indian Institute of Technology Bombay">
+                    <option value="Indian Institute of Technology Kanpur">
+                    <option value="Indian Institute Of Technology, Madras">
+                    <option value="National Institute Of Technology, Tiruchirappalli">
+                    <option value="Vellore Institute Of Technology">
+                    <option value="Veermata Jijabai Technological Institute">
+                    <option value="Walchand College of Engineering">
+                </datalist>
+
+                <label for="university">University Name :</label>
+                <input list="universities" id="university" placeholder="Name of University..." required>
+                <datalist id="universities">
+                    <option value="Birla Institute of Technology">
+                    <option value="Savitribai Phule Pune University">
+                    <option value="Indian Institute of Science, Bangalore">
+                    <option value="Indian Institute of Technology Bombay">
+                    <option value="Indian Institute of Technology Kanpur">
+                    <option value="Indian Institute Of Technology, Madras">
+                    <option value="National Institute Of Technology, Tiruchirappalli">
+                    <option value="Vellore Institute Of Technology">
+                    <option value="University of Mumbai">
+                    <option value="Shivaji University">
+                </datalist>
+
+                <br /><br />
+
+                <label for="exam-number">Exam Seat Number :</label>
+                <input type="text" id="exam-number" name="exam-number" placeholder="Exam Seat No..." required>
+            </fieldset>
+            <br />
+
+            <fieldset>
+                <legend>
+                    <strong>Exam Preferences Section</strong>
+                </legend>
+
+                <label for="exam-paper">Exam paper :</label>
+                <select name="exam-paper" id="exam-paper" form="PHD-registeration" required>
+                    <option value="" selected disabled hidden>Select</option>
+                    <option value="phd">
+                        PhD in Engineering and Technology</option>
+                    <option value="CSE">PhD Computer Science Engineering</option>
+                    <option value="IT">PhD in Information Technology</option>
+                    <option value="CE">PhD in Chemical Engineering</option>
+                    <option value="GE">PhD in Genetic Engineering</option>
+                    <option value="ECE">PhD in Electronics and Communication Engineering</option>
+                    <option value="MCS">PhD in Mathematical and Computational Sciences</option>
+                    <option value="SS">PhD in Social Sciences</option>
+                    <option value="HLS">PhD in Humanities and Life Sciences</option>
+                    <option value="LW">PhD in Law</option>
+                    <option value="CM">PhD in Commerce and Management</option>
+                    <option value="MG">PhD in Management</option>
+                    <option value="LT">PhD in Literature</option>
+                </select>
+
+                <label for="city">Examination City :</label>
+                <select name="city" id="city" required>
+                    <optgroup label="Maharashtra">
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Kolhapur">Kolhapur</option>
+                    </optgroup>
+                    <optgroup label="Delhi">
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Firozobad">Firozobad</option>
+                    </optgroup>
+                    <optgroup label="Uttar Pradesh">
+                        <option value="Ghaziabad">Ghaziabad</option>
+                        <option value="Kanpur">Kanpur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Noida">Noida</option>
+                    </optgroup>
+                    <optgroup label="Rajasthan">
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Jodhpur">Jodhpur</option>
+                        <option value="Ajmer">Ajmer</option>
+                    </optgroup>
+                    <optgroup label="Tamil Nadu">
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbature">Coimbature</option>
+                        <option value="Vellore">Vellore</option>
+                    </optgroup>
+                    <optgroup label="Kerela">
+                        <option value="Kochi">Kochi</option>
+                        <option value="Kannur">Kannur</option>
+                    </optgroup>
+                    <optgroup label="Gujarat">
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Vadodara">Vadodara</option>
+                    </optgroup>
+                    <optgroup label="Punjab">
+                        <option value="Ludhiana">Ludhiana</option>
+                        <option value="Amritsar">Amritsar</option>
+                        <option value="Jalandhar">Jalandhar</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+
+            <button type="submit">Submit Registeration Form</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </main>
+    <br>
+
+    <footer>
+        <span>Copyright&copy; 2020-21 Scholar's Institute of Post Graduation, Earth</span>
+    </footer>
+</body>
+
+</html>
